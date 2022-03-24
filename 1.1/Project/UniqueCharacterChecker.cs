@@ -20,7 +20,7 @@ public class UniqueCharacterChecker : IUniqueCharacterChecker
                 if (@char == textArr[i] && numberOfCurrentCharOccurrences > 0)
                     return false;
 
-                if (@char == textArr[i] && numberOfCurrentCharOccurrences == 0)
+                if (@char == textArr[i])
                     numberOfCurrentCharOccurrences++;
             }
         }
