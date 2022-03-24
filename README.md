@@ -1,7 +1,7 @@
 # CrackingTheCodingInterview
 My solutions to <a href="https://www.amazon.pl/Cracking-Coding-Interview-Programming-Questions/dp/0984782850">"Cracking The Coding Interview"</a> questions. I created the algorithms using the <a href="https://www.guru99.com/test-driven-development.html">TDD methodologist.</a>
 
-## Tools:
+## Tools
  * C#
  * .NET 6.0
  * NUnit
