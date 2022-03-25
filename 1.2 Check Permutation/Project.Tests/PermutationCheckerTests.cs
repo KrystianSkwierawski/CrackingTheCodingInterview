@@ -10,6 +10,7 @@ namespace Project.Tests
         [TestCase("cat", "tac", true)]
         [TestCase("testt", "tset", false)]
         [TestCase("test", "tset", true)]
+        [TestCase("tact coa", "taco cat", true)]
         public void Test1(string text1, string text2, bool expectedResult)
         {
             IPermutationChecker checker = new PermutationChecker();

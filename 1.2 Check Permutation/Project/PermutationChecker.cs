@@ -13,10 +13,10 @@ public class PermutationChecker : IPermutationChecker
         if (text1.Length != text2.Length)
             return false;
 
-        var text1List = text1.ToCharArray().ToList();
-        var text2List = text2.ToCharArray().ToList();
+        var text1List = text1.ToList();
+        var text2List = text2.ToList();
 
-        foreach (var @char in text1.ToCharArray().ToList())
+        foreach (var @char in text1.ToList())
         {
             if (!text2List.Contains(@char))
                 return false;
