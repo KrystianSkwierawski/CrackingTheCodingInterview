@@ -43,9 +43,6 @@ public class OneAwayChecker : IOneAwayChecker
 
     private bool IsOneCharInserted(string text1, string text2)
     {
-        var text1Arr = text1.ToCharArray();
-        var text2Arr = text2.ToCharArray();
-
         if (text1.Length < text2.Length)
         {
             StringBuilder temp = new();
@@ -53,9 +50,9 @@ public class OneAwayChecker : IOneAwayChecker
 
             for (int i = 0; i < text2.Length; i++)
             {
-                char currentChar = text2Arr[i];
+                char currentChar = text2[i];
 
-                if (text1Arr.ElementAtOrDefault(i - numberOfInsertedChars) != currentChar)
+                if (text1.ElementAtOrDefault(i - numberOfInsertedChars) != currentChar)
                     numberOfInsertedChars++;
 
                 if (numberOfInsertedChars > 1)
@@ -75,9 +72,9 @@ public class OneAwayChecker : IOneAwayChecker
 
             for (int i = 0; i < text1.Length; i++)
             {
-                char currentChar = text1Arr[i];
+                char currentChar = text1[i];
 
-                if (text2Arr.ElementAtOrDefault(i - numberOfInsertedChars) != currentChar)
+                if (text2.ElementAtOrDefault(i - numberOfInsertedChars) != currentChar)
                     numberOfInsertedChars++;
 
                 if (numberOfInsertedChars > 1)
@@ -95,9 +92,6 @@ public class OneAwayChecker : IOneAwayChecker
 
     private bool IsOneCharRemoved(string text1, string text2)
     {
-        var text1Arr = text1.ToCharArray();
-        var text2Arr = text2.ToCharArray();
-
         if (text1.Length < text2.Length)
         {
             StringBuilder temp = new();
@@ -105,9 +99,9 @@ public class OneAwayChecker : IOneAwayChecker
 
             for (int i = 0; i < text2.Length; i++)
             {
-                char currentChar = text2Arr[i];
+                char currentChar = text2[i];
 
-                if (text1Arr.ElementAtOrDefault(i - numberOfRemovedChars) != currentChar)
+                if (text1.ElementAtOrDefault(i - numberOfRemovedChars) != currentChar)
                     numberOfRemovedChars++;
 
                 if (numberOfRemovedChars > 1)
@@ -127,9 +121,9 @@ public class OneAwayChecker : IOneAwayChecker
 
             for (int i = 0; i < text1.Length; i++)
             {
-                char currentChar = text1Arr[i];
+                char currentChar = text1[i];
 
-                if (text2Arr.ElementAtOrDefault(i - numberOfRemovedChars) != currentChar)
+                if (text2.ElementAtOrDefault(i - numberOfRemovedChars) != currentChar)
                     numberOfRemovedChars++;
 
                 if (numberOfRemovedChars > 1)
@@ -147,9 +141,6 @@ public class OneAwayChecker : IOneAwayChecker
     {
         if (text1.Length != text2.Length) return false;
 
-        var text1Arr = text1.ToCharArray();
-        var text2Arr = text2.ToCharArray();
-
         StringBuilder temp = new();
         int numberOfReplacedChars = 0;
 
@@ -159,9 +150,9 @@ public class OneAwayChecker : IOneAwayChecker
             if (numberOfReplacedChars > 1)
                 return false;
 
-            char currentChar = text1Arr[i];
+            char currentChar = text1[i];
 
-            if (!(text2Arr[i] == currentChar))
+            if (!(text2[i] == currentChar))
                 numberOfReplacedChars++;
 
             temp.Append(currentChar);
