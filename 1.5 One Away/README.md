@@ -9,3 +9,4 @@ pale, bale -> true<br>
 pale, bake -> false 
 
 ## My Solution
+I exaggerated a bit with the solution, it not only checks if it is just one edit away but if it is possible to get the same strings when inserting, deleting, or replacing. The code has some repetition and for sure can be refactored.
