@@ -9,4 +9,9 @@ pale, bale -> true<br>
 pale, bake -> false 
 
 ## My Solution
-I exaggerated a bit with the solution, it not only checks if it is just one edit away but if it is possible to get the same strings when inserting, deleting, or replacing. The code has some repetition and for sure can be refactored.
+The code has some repetitions and for sure can be refactored. I exaggerated a bit with the solution, it not only checks if it is just one edit away but if it is possible to get the same strings when inserting, deleting, or replacing. It is possible to get the same strings inserting or deleting letters.
+
+EXAMPLE<br>
+pale, ple - you can remove "e" from first string or add "a" to second string.<br>
+pales, pale - you can remove "s" from first string or add "s" to second string.
+
