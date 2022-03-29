@@ -10,7 +10,6 @@ namespace Project.Tests
         public void ShouldRotateCorrectlyWhenEvenNxN()
         {
             //Arrange
-
             int[][] image =
             {
                 new int[]{ 1, 2, 3, 4 },
@@ -40,7 +39,6 @@ namespace Project.Tests
         public void ShouldRotateCorrectlyWhenOddNxN()
         {
             //Arrange
-
             int[][] image =
             {
                 new int[]{ 1, 2, 3 },

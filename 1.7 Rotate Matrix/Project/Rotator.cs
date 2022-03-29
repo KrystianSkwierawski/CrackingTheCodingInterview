@@ -53,6 +53,7 @@ public class Rotator : IRotator
         {
             for (int column = 0; column < n; column++)
             {
+                //top edge = left edge
                 int? topIndex = _image[row].Select((value, index) => (value, (int?)index))
                     .SingleOrDefault(x => x.value == top[column]).Item2;
 
@@ -60,7 +61,7 @@ public class Rotator : IRotator
                     o_result[row][topIndex.Value] = left.Reverse().ToArray()[column];
 
 
-
+                //right edge = top edge
                 int? rightIndex = _image[row].Select((value, index) => (value, (int?)index))
                     .SingleOrDefault(x => x.value == right[column]).Item2;
 
@@ -68,7 +69,7 @@ public class Rotator : IRotator
                     o_result[row][rightIndex.Value] = top[column];
 
 
-
+                //bottom edge = right edge
                 int? bottomIndex = _image[row].Select((value, index) => (value, (int?)index))
                    .SingleOrDefault(x => x.value == bottom[column]).Item2;
 
@@ -76,7 +77,7 @@ public class Rotator : IRotator
                     o_result[row][bottomIndex.Value] = right.Reverse().ToArray()[column];
 
 
-
+                //left edge = bottom edge
                 int? leftIndex = _image[row].Select((value, index) => (value, (int?)index))
                    .FirstOrDefault(x => x.value == left[column]).Item2;
 
