@@ -27,24 +27,24 @@ public class Rotator : IRotator
         {
             int n = _tempImage.Length;
 
-            IList<int> top = _tempImage.First().ToList();
-            IList<int> bottom = _tempImage.Last().ToList();
-            IList<int> left = new List<int>();
-            IList<int> right = new List<int>();
+            IList<int> valuesOfTopEdge = _tempImage.First().ToList();
+            IList<int> valuesOfBottomEdge = _tempImage.Last().ToList();
+            IList<int> valuesOfLeftEdge = new List<int>();
+            IList<int> valuesOfRightEdge = new List<int>();
 
             for (int j = 0; j < _tempImage.Length; j++)
             {
-                int rightElement = _tempImage[j].Last();
-                right.Add(rightElement);
+                int rightEdgeElement = _tempImage[j].Last();
+                valuesOfRightEdge.Add(rightEdgeElement);
 
-                int leftElement = _tempImage[j].First();
-                left.Add(leftElement);
+                int leftEdgeElement = _tempImage[j].First();
+                valuesOfLeftEdge.Add(leftEdgeElement);
             }
 
-            var edgesValuesToRemove = top.Concat(bottom).Concat(left).Concat(right);
+            var edgesValuesToRemove = valuesOfTopEdge.Concat(valuesOfBottomEdge).Concat(valuesOfLeftEdge).Concat(valuesOfRightEdge);
             RemoveEdgesFromTempArray(edgesValuesToRemove);
 
-            ReplaceEdgesValues(o_result, top, right, bottom, left, n);
+            ReplaceEdgesValues(o_result, valuesOfTopEdge, valuesOfRightEdge, valuesOfBottomEdge, valuesOfLeftEdge, n);
         }
 
         return o_result;
