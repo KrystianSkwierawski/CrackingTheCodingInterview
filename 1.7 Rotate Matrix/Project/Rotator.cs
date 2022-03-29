@@ -1,10 +1,7 @@
 ﻿using Force.DeepCloner;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json;
 
 namespace Project;
 
@@ -41,8 +38,8 @@ public class Rotator : IRotator
                 valuesOfLeftEdge.Add(leftEdgeElement);
             }
 
-            var edgesValuesToRemove = valuesOfTopEdge.Concat(valuesOfBottomEdge).Concat(valuesOfLeftEdge).Concat(valuesOfRightEdge);
-            RemoveEdgesFromTempArray(edgesValuesToRemove);
+            var edgeValuesToRemove = valuesOfTopEdge.Concat(valuesOfBottomEdge).Concat(valuesOfLeftEdge).Concat(valuesOfRightEdge);
+            RemoveEdgeValuesFromTempArray(edgeValuesToRemove);
 
             ReplaceEdgesValues(o_result, valuesOfTopEdge, valuesOfRightEdge, valuesOfBottomEdge, valuesOfLeftEdge, n);
         }
@@ -89,7 +86,7 @@ public class Rotator : IRotator
         }
     }
 
-    private void RemoveEdgesFromTempArray(IEnumerable<int> allValuesToRemove)
+    private void RemoveEdgeValuesFromTempArray(IEnumerable<int> allValuesToRemove)
     {
         for (int row = 0; row < _tempImage.Length; row++)
         {
