@@ -79,7 +79,7 @@ public class Rotator : IRotator
 
                 //left edge = bottom edge
                 int? leftIndex = _image[row].Select((value, index) => (value, (int?)index))
-                   .FirstOrDefault(x => x.value == left[column]).Item2;
+                   .SingleOrDefault(x => x.value == left[column]).Item2;
 
                 if (leftIndex is not null)
                     o_result[row][leftIndex.Value] = bottom[column];
