@@ -8,6 +8,6 @@ namespace Project;
 
 public interface IRotator
 {
-    public Array[] Rotate90Degrees(Array[] array);
+    public Array[] Rotate90Degrees();
 }
 
