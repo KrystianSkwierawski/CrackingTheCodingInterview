@@ -29,12 +29,12 @@ public class Rotator : IRotator
             IList<int> valuesOfLeftEdge = new List<int>();
             IList<int> valuesOfRightEdge = new List<int>();
 
-            for (int j = 0; j < _tempImage.Length; j++)
+            for (int row = 0; row < _tempImage.Length; row++)
             {
-                int rightEdgeElement = _tempImage[j].Last();
+                int rightEdgeElement = _tempImage[row].Last();
                 valuesOfRightEdge.Add(rightEdgeElement);
 
-                int leftEdgeElement = _tempImage[j].First();
+                int leftEdgeElement = _tempImage[row].First();
                 valuesOfLeftEdge.Add(leftEdgeElement);
             }
 
@@ -57,7 +57,7 @@ public class Rotator : IRotator
                     .SingleOrDefault(x => x.value == top[column]).Item2;
 
                 if (topIndex is not null)
-                    o_result[row][(int)topIndex] = left.Reverse().ToArray()[column];
+                    o_result[row][topIndex.Value] = left.Reverse().ToArray()[column];
 
 
 
@@ -65,7 +65,7 @@ public class Rotator : IRotator
                     .SingleOrDefault(x => x.value == right[column]).Item2;
 
                 if (rightIndex is not null)
-                    o_result[row][(int)rightIndex] = top[column];
+                    o_result[row][rightIndex.Value] = top[column];
 
 
 
@@ -73,7 +73,7 @@ public class Rotator : IRotator
                    .SingleOrDefault(x => x.value == bottom[column]).Item2;
 
                 if (bottomIndex is not null)
-                    o_result[row][(int)bottomIndex] = right.Reverse().ToArray()[column];
+                    o_result[row][bottomIndex.Value] = right.Reverse().ToArray()[column];
 
 
 
@@ -81,7 +81,7 @@ public class Rotator : IRotator
                    .FirstOrDefault(x => x.value == left[column]).Item2;
 
                 if (leftIndex is not null)
-                    o_result[row][(int)leftIndex] = bottom[column];
+                    o_result[row][leftIndex.Value] = bottom[column];
             }
         }
     }
