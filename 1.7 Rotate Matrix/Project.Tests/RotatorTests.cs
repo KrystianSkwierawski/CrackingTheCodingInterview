@@ -7,7 +7,7 @@ namespace Project.Tests
     public class RotatorTests
     {
         [Test]
-        public void ShouldRotate90DegreesWhenEvenNxN()
+        public void ShouldRotateCorrectlyWhenEvenNxN()
         {
             //Arrange
 
@@ -37,7 +37,7 @@ namespace Project.Tests
         }
 
         [Test]
-        public void ShouldRotate90DegreesWhenOddNxN()
+        public void ShouldRotateCorrectlyWhenOddNxN()
         {
             //Arrange
 
