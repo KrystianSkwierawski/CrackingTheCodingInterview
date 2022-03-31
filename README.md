@@ -19,6 +19,8 @@ My solutions to <a href="https://www.amazon.pl/Cracking-Coding-Interview-Program
 - [ ] Chapter 9 - System Design and Scalability
 - [ ] Chapter 10 - Sorting and Searching
 - [ ] Chapter 11 - Testing
+- [ ] Chapter 12 - C and C++
+- [ ] Chapter 13 - Java
 - [ ] Chapter 14 - Databases
 - [ ] Chapter 15 - Threads and Locks
 - [ ] Chapter 16 - Moderate
