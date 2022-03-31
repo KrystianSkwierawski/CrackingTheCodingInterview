@@ -12,7 +12,7 @@ My solutions to <a href="https://www.amazon.pl/Cracking-Coding-Interview-Program
 - [ ] Chapter 2 - Linked Lists (Inprogress)
 - [ ] Chapter 3 - Stack and Queues
 - [ ] Chapter 4 - Trees and Graphs
-- [ ] Chapter 5. Bit Manipulation
+- [ ] Chapter 5 - Bit Manipulation
 - [ ] Chapter 6 - Math and Logic Puzzles
 - [ ] Chapter 7 - Object-Oriented Design
 - [ ] Chapter 8 - Recursion and Dynammic programming
