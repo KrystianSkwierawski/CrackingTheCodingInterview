@@ -22,7 +22,7 @@ public class Matrix : IMatrix
                 continue;
 
             SetRow(o_result, row);
-            SetColumns(o_result, zerosInCurrentRow);
+            SetColumn(o_result, zerosInCurrentRow);
         }
 
         return o_result;
@@ -36,7 +36,7 @@ public class Matrix : IMatrix
         }
     }
 
-    private void SetColumns(int[][] o_result, IEnumerable<(int value, int index)> zerosInCurrentRow)
+    private void SetColumn(int[][] o_result, IEnumerable<(int value, int index)> zerosInCurrentRow)
     {
         foreach (var zero in zerosInCurrentRow)
         {
