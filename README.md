@@ -8,7 +8,7 @@ My solutions to <a href="https://www.amazon.pl/Cracking-Coding-Interview-Program
  * Fluent Assertions
 
 ## Status
-- [x] Chapter 1 - Array and Strings
+- [x] <a href="https://github.com/KrystianSkwierawski/CrackingTheCodingInterview/tree/main/1.%20Arrays%20and%20Strings">Chapter 1 - Array and Strings</a>
 - [ ] Chapter 2 - Linked Lists (Inprogress)
 - [ ] Chapter 3 - Stack and Queues
 - [ ] Chapter 4 - Trees and Graphs
