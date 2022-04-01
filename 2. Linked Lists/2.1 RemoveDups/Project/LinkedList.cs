@@ -1,4 +1,6 @@
-﻿namespace Project;
+﻿using System;
+
+namespace Project;
 
 public class LinkedList<T>
 {
@@ -25,7 +27,7 @@ public class LinkedList<T>
     public void RemoveDups(Node<T> head)
     {
         if (head is null)
-            return;
+            throw new ArgumentNullException();
 
         Node<T> current = head;
 

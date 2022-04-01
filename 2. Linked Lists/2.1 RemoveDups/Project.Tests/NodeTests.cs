@@ -2,6 +2,7 @@ using NUnit.Framework;
 using FluentAssertions;
 using System.Collections.Generic;
 using System.Linq;
+using System;
 
 namespace Project.Tests
 {
@@ -33,6 +34,15 @@ namespace Project.Tests
             expectedResult.AddLast(6);
 
             linkedList.Should().BeEquivalentTo(expectedResult);
+        }
+
+        [Test]
+        public void ShouldThrowExceptionIfNodeIsNull()
+        {
+            LinkedList<int> linkedList = new();
+
+            FluentActions.Invoking(() => linkedList.RemoveDups(null))
+                .Should().Throw<ArgumentNullException>();
         }
     }
 }
