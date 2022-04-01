@@ -8,7 +8,23 @@ My solutions to <a href="https://www.amazon.pl/Cracking-Coding-Interview-Program
  * Fluent Assertions
 
 ## Status
-Project is in progress.
+- [x] <a href="https://github.com/KrystianSkwierawski/CrackingTheCodingInterview/tree/main/1.%20Arrays%20and%20Strings">Chapter 1 - Array and Strings</a>
+- [ ] Chapter 2 - Linked Lists (Inprogress)
+- [ ] Chapter 3 - Stack and Queues
+- [ ] Chapter 4 - Trees and Graphs
+- [ ] Chapter 5 - Bit Manipulation
+- [ ] Chapter 6 - Math and Logic Puzzles
+- [ ] Chapter 7 - Object-Oriented Design
+- [ ] Chapter 8 - Recursion and Dynammic programming
+- [ ] Chapter 9 - System Design and Scalability
+- [ ] Chapter 10 - Sorting and Searching
+- [ ] Chapter 11 - Testing
+- [ ] Chapter 12 - C and C++
+- [ ] Chapter 13 - Java
+- [ ] Chapter 14 - Databases
+- [ ] Chapter 15 - Threads and Locks
+- [ ] Chapter 16 - Moderate
+- [ ] Chapter 17 - Hard 
 
 ![image](https://user-images.githubusercontent.com/52860350/159959923-3de5d9e4-a222-4eec-b849-86fbebfb07ff.png)
 
