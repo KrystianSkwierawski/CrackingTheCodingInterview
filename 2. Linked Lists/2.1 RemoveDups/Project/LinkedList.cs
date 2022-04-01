@@ -2,7 +2,7 @@
 
 namespace Project;
 
-public class LinkedList<T>
+public class LinkedList<T> : ILinkedList<T>
 {
     public Node<T> Head { get; set; }
 
