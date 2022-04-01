@@ -9,7 +9,7 @@ My solutions to <a href="https://www.amazon.pl/Cracking-Coding-Interview-Program
 
 ## Status
 - [x] <a href="https://github.com/KrystianSkwierawski/CrackingTheCodingInterview/tree/main/1.%20Arrays%20and%20Strings">Chapter 1 - Array and Strings</a>
-- [ ] Chapter 2 - Linked Lists (Inprogress)
+- [ ] <a href="https://github.com/KrystianSkwierawski/CrackingTheCodingInterview/tree/main/2.%20Linked%20Lists">Chapter 2 - Linked Lists (Inprogress)</a>
 - [ ] Chapter 3 - Stack and Queues
 - [ ] Chapter 4 - Trees and Graphs
 - [ ] Chapter 5 - Bit Manipulation
