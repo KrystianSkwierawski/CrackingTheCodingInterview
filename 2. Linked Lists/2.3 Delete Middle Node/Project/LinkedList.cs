@@ -55,6 +55,9 @@ public class LinkedList<T> : ILinkedList<T>
         if (middleNode is null)
             throw new ArgumentNullException();
 
+        if (middleNode.Previous is null || middleNode.Next is null)
+            throw new Exception("Not a middle node");
+
         Node<T> previous = middleNode.Previous;
         previous.Next = previous.Next.Next;
     }
