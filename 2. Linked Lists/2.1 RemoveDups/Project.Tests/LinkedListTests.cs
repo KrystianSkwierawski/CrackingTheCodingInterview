@@ -6,7 +6,7 @@ using System;
 
 namespace Project.Tests
 {
-    public class NodeTests
+    public class LinkedListTests
     {
         [Test]
         public void ShouldRemoveDups()

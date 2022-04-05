@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace Project.Tests
 {
-    public class NodeTests
+    public class LinkedListTests
     {
         [Test]
         public void ShouldDeleteMiddleNode()

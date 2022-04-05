@@ -1,12 +1,10 @@
 using FluentAssertions;
 using NUnit.Framework;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace Project.Tests
 {
-    public class NodeTests
+    public class LinkedListTests
     {
         [Test]
         [TestCase(new int[] { 3, 5, 8, 5, 10, 2 ,1 }, new int[] { 3, 2, 1, 5, 8, 5, 10 }, 5)]

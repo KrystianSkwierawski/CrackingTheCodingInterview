@@ -4,11 +4,11 @@ using System;
 
 namespace Project.Tests
 {
-    public class NodeTests
+    public class LinkedListTests
     {
         ILinkedList<int> _linkedList;
 
-        public NodeTests()
+        public LinkedListTests()
         {
             _linkedList = new LinkedList<int>();
             _linkedList.AddLast(1);
