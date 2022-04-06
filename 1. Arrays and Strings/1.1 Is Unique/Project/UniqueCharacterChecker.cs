@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace Project;
 
@@ -6,8 +7,9 @@ public class UniqueCharacterChecker : IUniqueCharacterChecker
 {
     public bool HasAllUniqueCharacter(string text)
     {
-        if(String.IsNullOrEmpty(text))
+        if (String.IsNullOrEmpty(text))
             throw new ArgumentNullException();
+
 
         for (int i = 0; i < text.Length; i++)
         {
