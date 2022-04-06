@@ -16,7 +16,7 @@ public class PermutationChecker : IPermutationChecker
         var text1List = text1.ToList();
         var text2List = text2.ToList();
 
-        foreach (var @char in text1.ToList())
+        foreach (var @char in text1.ToCharArray())
         {
             if (!text2List.Contains(@char))
                 return false;
