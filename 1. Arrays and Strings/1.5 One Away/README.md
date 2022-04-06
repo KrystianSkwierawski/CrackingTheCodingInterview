@@ -13,5 +13,9 @@ The code has some repetitions and for sure can be refactored. I exaggerated a bi
 
 EXAMPLE<br>
 pale, ple - you can remove "e" from first string or add "a" to second string.<br>
-pales, pale - you can remove "s" from first string or add "s" to second string.
+pales, pale - you can remove "s" from first string or add "s" to second string.<br>
+
+Time complexity: O(n). <br>
+Space complexity: O(n) where n is the length of the longer string.<br>
+Auxiliary space complexity: O(n).
 
