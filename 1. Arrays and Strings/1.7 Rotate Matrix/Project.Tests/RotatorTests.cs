@@ -17,6 +17,7 @@ namespace Project.Tests
                 new int[]{ 9, 10, 11, 12 },
                 new int[]{ 13, 14, 15, 16 },
             };
+
             IRotator rotator = new Rotator(image);
 
 
@@ -61,7 +62,6 @@ namespace Project.Tests
 
             result.Should().BeEquivalentTo(expectedImage);
         }
-
 
         [Test]
         [TestCase(null)]

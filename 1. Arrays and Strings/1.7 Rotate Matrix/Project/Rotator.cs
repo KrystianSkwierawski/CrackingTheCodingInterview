@@ -29,7 +29,7 @@ public class Rotator : IRotator
             IList<int> valuesOfLeftEdge = new List<int>();
             IList<int> valuesOfRightEdge = new List<int>();
 
-            for (int row = 0; row < _tempImage.Length; row++)
+            for (int row = 0; row < n; row++)
             {
                 int rightEdgeElement = _tempImage[row].Last();
                 valuesOfRightEdge.Add(rightEdgeElement);
@@ -43,7 +43,7 @@ public class Rotator : IRotator
 
             ReplaceEdgesValues(o_result, valuesOfTopEdge, valuesOfRightEdge, valuesOfBottomEdge, valuesOfLeftEdge, n);
         }
-
+      
         return o_result;
     }
 
@@ -91,10 +91,7 @@ public class Rotator : IRotator
     {
         for (int row = 0; row < _tempImage.Length; row++)
         {
-            foreach (var valueToRemove in allValuesToRemove)
-            {
-                _tempImage[row] = _tempImage[row].Where(x => x != valueToRemove).ToArray();
-            }
+            _tempImage[row] = _tempImage[row].Where(x => !allValuesToRemove.Contains(x)).ToArray();
         }
 
         _tempImage = _tempImage.Where(x => x.Length != 0).ToArray();
