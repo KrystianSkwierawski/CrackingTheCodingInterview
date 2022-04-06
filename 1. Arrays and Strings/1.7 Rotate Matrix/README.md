@@ -9,4 +9,4 @@ Time complexity: O(n*t) when t is sum of all temparray lenghts(I.e, n=3 then t=3
 Space complexity: O(n²).<br>
 Auxiliary space complexity: O(n²).<br>
 
-![Przechwytywanie](https://user-images.githubusercontent.com/52860350/162008525-da8c5ae9-f962-4790-b153-8dc6d2f78ae3.png)<br>
+![Przechwytywanie](https://user-images.githubusercontent.com/52860350/162009477-68b1dd16-b373-40fd-98ee-4d4b6fa81bde.png)<br>
