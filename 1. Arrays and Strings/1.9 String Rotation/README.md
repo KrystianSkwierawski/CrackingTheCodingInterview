@@ -4,6 +4,6 @@ of another. Given two strings, s1 and s2, write code to check if s2 is a rotatio
 call to isSubstring (e.g., "waterbottle" is a rotation of"erbottlewat").
 
 ## My Solution
-Time complexity: O(1).
-Space complexity: O(n) where n is the length of the string.
+Time complexity: O(1).<br>
+Space complexity: O(n) where n is the length of the string.<br>
 Auxiliary space complexity: O(1).
