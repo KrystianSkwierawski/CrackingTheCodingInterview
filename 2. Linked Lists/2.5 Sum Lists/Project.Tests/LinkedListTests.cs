@@ -20,7 +20,8 @@ namespace Project.Tests
 
 
             //Act
-            var result = linkedList.SumLists(linkedList2);
+            var result = Node<int>.SumLinkedLists(linkedList.Head, linkedList2.Head);
+
 
             //Assert
             result.Should().Be(expectedResult);
@@ -32,7 +33,7 @@ namespace Project.Tests
         {
             ILinkedList<int> linkedList = new LinkedList<int>();
 
-            FluentActions.Invoking(() => linkedList.SumLists(null))
+            FluentActions.Invoking(() => Node<int>.SumLinkedLists(null, null))
                 .Should().Throw<ArgumentNullException>();
         }
     }
