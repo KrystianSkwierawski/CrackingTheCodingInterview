@@ -8,3 +8,7 @@ Input:<br>
 Output:<br>
 3 -> 5 -> 8 -> 5 -> 10 -> 2 -> 1 [partition= 5]<br>
 3 -> 1 -> 2 -> 10 -> 5 -> 5 -> 8 
+
+## My Solution
+Time complexity: O(n).<br>
+Space complexity: O(n).
