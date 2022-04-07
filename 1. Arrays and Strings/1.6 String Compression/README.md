@@ -7,4 +7,3 @@ the original string. You can assume the string has only uppercase and lowercase 
 ## My Solution
 Time complexity: O(n). <br>
 Space complexity: O(n) where n is the length of the string.
-Auxiliary space complexity: O(n).
