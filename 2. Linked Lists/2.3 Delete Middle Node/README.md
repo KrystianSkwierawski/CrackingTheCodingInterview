@@ -6,3 +6,7 @@ EXAMPLE<br>
 lnput:the node c from the linked list a->b->c->d->e->f<br>
 Result: nothing is returned, but the new linked list looks like a ->b->d->e->f
 
+## My Solution
+Time complexity: O(1).<br>
+Space complexity: O(1).
+
