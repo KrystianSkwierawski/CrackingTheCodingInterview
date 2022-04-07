@@ -4,5 +4,5 @@ column are set to 0.
 
 ## My Solution
 Time complexity: O(n² * m) when n is number of rows and m is number of columns.<br>
-Space complexity: O(n²).<br>
-Auxiliary space complexity: O(n²).
+Space complexity: O(m * n) I created a clone of the matrix.
+
