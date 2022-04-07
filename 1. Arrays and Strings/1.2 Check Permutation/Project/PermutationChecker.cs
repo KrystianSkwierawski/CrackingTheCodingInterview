@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Project;
@@ -13,8 +14,8 @@ public class PermutationChecker : IPermutationChecker
         if (text1.Length != text2.Length)
             return false;
 
-        var text1List = text1.ToList();
-        var text2List = text2.ToList();
+        IList<char> text1List = text1.ToList();
+        IList<char> text2List = text2.ToList();
 
         foreach (var @char in text1.ToCharArray())
         {
