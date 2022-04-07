@@ -10,6 +10,6 @@ Output: "Mr%20John%20Smith"
 
 ## My Solution
 Time complexity: O(1). <br>
-Space complexity: O(n) where n is the length of the string.<br>
-Auxiliary space complexity: O(n) I returned a new string, but it is possbible to replace input and would take O(1).
+Space complexity: O(n) where n is the length of the string. I returned a new string, but it is possbible to replace input and would take O(1).
+
 
