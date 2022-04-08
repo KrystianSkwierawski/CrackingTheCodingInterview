@@ -12,7 +12,7 @@ namespace Project.Tests
         [TestCase(0, 7)]
         public void ShouldFindKthToLast(int kth, int expectedResult)
         {
-            ILinkedList<int> linkedList = new LinkedList<int>(new int[] { 1, 3, 7, 6, 1, 7, 1, 6, 7, 2, 1, 2, 3, 4, 5, 6, 7});
+            ILinkedList<int> linkedList = new LinkedList<int>(new int[] { 1, 3, 7, 6, 1, 7, 1, 6, 7, 2, 1, 2, 3, 4, 5, 6, 7 });
 
             var result = linkedList.FindKthToLast(kth);
 
@@ -22,7 +22,9 @@ namespace Project.Tests
         [Test]
         public void ShouldThrowExceptionIfNotFoundNodeByIndex()
         {
-            FluentActions.Invoking(() => new LinkedList<int>().FindKthToLast(1000000))
+            ILinkedList<int> linkedList = new LinkedList<int>(new int[] { 1, 3, 7, 6, 1, 7, 1, 6, 7, 2, 1, 2, 3, 4, 5, 6, 7 });
+
+            FluentActions.Invoking(() => linkedList.FindKthToLast(1000000))
                 .Should().Throw<Exception>();
         }
 
