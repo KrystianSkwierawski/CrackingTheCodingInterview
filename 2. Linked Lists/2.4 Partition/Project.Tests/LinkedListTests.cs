@@ -24,7 +24,7 @@ namespace Project.Tests
         }
 
         [Test]
-        public void ShouldThrowExceptionIfNodeIsNull()
+        public void ShouldThrowExceptionIfHeadIsNull()
         {
             FluentActions.Invoking(() => new LinkedList<int>().DoPartition(0))
                 .Should().Throw<ArgumentNullException>();

@@ -31,8 +31,6 @@ namespace Project.Tests
         [Test]
         public void ShouldThrowExceptionIfNodeIsNull()
         {
-            ILinkedList<int> linkedList = new LinkedList<int>();
-
             FluentActions.Invoking(() => Node<int>.SumLinkedLists(null, null))
                 .Should().Throw<ArgumentNullException>();
         }

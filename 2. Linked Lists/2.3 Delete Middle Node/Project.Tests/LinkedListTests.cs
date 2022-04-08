@@ -31,9 +31,7 @@ namespace Project.Tests
         [Test]
         public void ShouldThrowExceptionIfNodeIsNull()
         {
-            ILinkedList<int> linkedList = new LinkedList<int>();
-
-            FluentActions.Invoking(() => linkedList.DeleteMiddleNode(null))
+            FluentActions.Invoking(() => new LinkedList<int>().DeleteMiddleNode(null))
                 .Should().Throw<ArgumentNullException>();
         }
     }
