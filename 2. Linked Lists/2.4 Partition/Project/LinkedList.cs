@@ -63,6 +63,9 @@ public class LinkedList<T> : ILinkedList<T>
 
     public LinkedList<int> DoPartition(int x)
     {
+        if (Head is null)
+            throw new ArgumentNullException();
+
         Node<int> head = Head as Node<int>;
 
         var (leftPartiton, RightPartiton) = GetLeftAndRightPartition(head, x);

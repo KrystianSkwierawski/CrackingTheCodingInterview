@@ -22,5 +22,12 @@ namespace Project.Tests
             ILinkedList<int> expectedResult = new LinkedList<int>(expectedList);
             result.List.Should().BeEquivalentTo(expectedResult.List);
         }
+
+        [Test]
+        public void ShouldThrowExceptionIfNodeIsNull()
+        {
+            FluentActions.Invoking(() => new LinkedList<int>().DoPartition(0))
+                .Should().Throw<ArgumentNullException>();
+        }
     }
 }
