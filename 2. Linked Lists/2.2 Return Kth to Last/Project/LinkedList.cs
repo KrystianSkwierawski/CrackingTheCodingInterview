@@ -77,20 +77,23 @@ public class LinkedList<T> : ILinkedList<T>
 
     private int GetLinkedListLength(Node<T> head)
     {
+        // I used here the "Runner" technique described in the beginning of the chapter.
         // We can also use LinkedList.List.Count();
 
         int o_length = 0;
 
-        Node<T> current = head;
+        Node<T> fast = head;
+        Node<T> slow = head;
 
-        while (current is not null)
+        while (fast != null && fast.Next != null)
         {
-            o_length++;
+            o_length += 2;
 
-            current = current.Next;
+            fast = fast.Next.Next;
+            slow = slow.Next;
         }
 
-        return o_length;
+        return (slow is not null) ? ++o_length : o_length;
     }
 }
 
