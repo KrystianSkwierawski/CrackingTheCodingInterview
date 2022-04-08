@@ -1,10 +1,25 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Project;
 
 public class LinkedList<T> : ILinkedList<T>
 {
     public Node<T> Head { get; set; }
+
+    public LinkedList(IList<T> list)
+    {
+        foreach (var node in list)
+        {
+            this.AddLast(node);
+        }
+    }
+
+    public LinkedList()
+    {
+
+    }
+
 
     public void AddLast(T value)
     {
@@ -24,12 +39,13 @@ public class LinkedList<T> : ILinkedList<T>
         current.Next = new Node<T>(value);
     }
 
-    public void RemoveDups(Node<T> head)
+    public void RemoveDups()
     {
-        if (head is null)
+        if (Head is null)
             throw new ArgumentNullException();
 
-        Node<T> current = head;
+
+        Node<T> current = Head;
 
         while (current is not null)
         {

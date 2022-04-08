@@ -1,7 +1,5 @@
-using NUnit.Framework;
 using FluentAssertions;
-using System.Collections.Generic;
-using System.Linq;
+using NUnit.Framework;
 using System;
 
 namespace Project.Tests
@@ -12,36 +10,22 @@ namespace Project.Tests
         public void ShouldRemoveDups()
         {
             //Arrange
-            LinkedList<int> linkedList = new();
-            linkedList.AddLast(1);
-            linkedList.AddLast(3);
-            linkedList.AddLast(7);
-            linkedList.AddLast(6);
-            linkedList.AddLast(1);
-            linkedList.AddLast(7);
-            linkedList.AddLast(1);
-            linkedList.AddLast(1);
+            LinkedList<int> linkedList = new(new int[] { 1, 3, 7, 6, 1, 7, 1, 1});
 
 
             //Act
-            linkedList.RemoveDups(linkedList.Head);
+            linkedList.RemoveDups();
+
 
             //Assert
-            LinkedList<int> expectedResult = new();
-            expectedResult.AddLast(1);
-            expectedResult.AddLast(3);
-            expectedResult.AddLast(7);
-            expectedResult.AddLast(6);
-
+            LinkedList<int> expectedResult = new(new int[] {1, 3, 7, 6});
             linkedList.Should().BeEquivalentTo(expectedResult);
         }
 
         [Test]
-        public void ShouldThrowExceptionIfNodeIsNull()
+        public void ShouldThrowExceptionIfHeadIsNull()
         {
-            LinkedList<int> linkedList = new();
-
-            FluentActions.Invoking(() => linkedList.RemoveDups(null))
+            FluentActions.Invoking(() => new LinkedList<int>().RemoveDups())
                 .Should().Throw<ArgumentNullException>();
         }
     }
