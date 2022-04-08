@@ -61,22 +61,15 @@ public class LinkedList<T> : ILinkedList<T>
         return end;
     }
 
-    public void DoPartition(Node<int> head, int x)
+    public LinkedList<int> DoPartition(int x)
     {
-        if (head is null)
-            throw new ArgumentNullException();
-
+        Node<int> head = Head as Node<int>;
 
         var (leftPartiton, RightPartiton) = GetLeftAndRightPartition(head, x);
 
-        var partitions = leftPartiton.Concat(RightPartiton);
+        IList<int> partitions = leftPartiton.Concat(RightPartiton).ToList();
 
-        Node<int> current = head;
-        foreach (var element in partitions)
-        {
-            current.Value = element;
-            current = current.Next;
-        }
+        return new LinkedList<int>(partitions);
     }
 
     private (IList<int>, IList<int>) GetLeftAndRightPartition(Node<int> head, int x)

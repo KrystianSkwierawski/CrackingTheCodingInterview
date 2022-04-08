@@ -15,22 +15,12 @@ namespace Project.Tests
 
 
             //Act
-            linkedList.DoPartition(linkedList.Head, x);
+            var result = linkedList.DoPartition(x);
 
 
             //Assert
             ILinkedList<int> expectedResult = new LinkedList<int>(expectedList);
-            linkedList.List.Should().BeEquivalentTo(expectedResult.List);
-        }
-
-
-        [Test]
-        public void ShouldThrowExceptionIfNodeIsNull()
-        {
-            ILinkedList<int> linkedList = new LinkedList<int>();
-
-            FluentActions.Invoking(() => linkedList.DoPartition(null, 0))
-                .Should().Throw<ArgumentNullException>();
+            result.List.Should().BeEquivalentTo(expectedResult.List);
         }
     }
 }
