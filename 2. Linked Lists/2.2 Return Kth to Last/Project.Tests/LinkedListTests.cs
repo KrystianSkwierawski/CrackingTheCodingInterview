@@ -25,5 +25,12 @@ namespace Project.Tests
             FluentActions.Invoking(() => new LinkedList<int>().FindKthToLast(1000000))
                 .Should().Throw<Exception>();
         }
+
+        [Test]
+        public void ShouldThrowExceptionIfHeadIsNull()
+        {
+            FluentActions.Invoking(() => new LinkedList<int>().FindKthToLast(1))
+                .Should().Throw<ArgumentNullException>();
+        }
     }
 }

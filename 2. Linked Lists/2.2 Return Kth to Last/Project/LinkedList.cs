@@ -41,6 +41,10 @@ public class LinkedList<T> : ILinkedList<T>
 
     public T FindKthToLast(int kth)
     {
+        if (Head is null)
+            throw new ArgumentNullException();
+
+
         int length = GetLinkedListLength(Head);
 
         if (kth == 0)
