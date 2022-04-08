@@ -1,10 +1,25 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Project;
 
 public class LinkedList<T> : ILinkedList<T>
 {
     public Node<T> Head { get; set; }
+
+    public LinkedList(IList<T> list)
+    {
+        foreach (var node in list)
+        {
+            this.AddLast(node);
+        }
+    }
+
+    public LinkedList()
+    {
+
+    }
+
 
     public void AddLast(T value)
     {
@@ -24,26 +39,26 @@ public class LinkedList<T> : ILinkedList<T>
         current.Next = new Node<T>(value);
     }
 
-    public T FindKthToLast(Node<T> head, int kth)
+    public T FindKthToLast(int kth)
     {
-        if (head is null || kth == 0)
-            throw new ArgumentNullException();
+        int length = GetLinkedListLength(Head);
 
-        int length = GetLength(head);
+        if (kth == 0)
+            kth = length;
 
-        Node<T> node = FindByIndex(head, length, kth);
+        Node<T> node = FindByIndex(length, kth);
 
         if (node is not null)
             return node.Value;
 
-        throw new Exception($"Not found an item: {nameof(head)} kth to last: {kth}");
+        throw new Exception($"Not found an item: {nameof(Head)} kth to last: {kth}");
     }
 
-    private Node<T> FindByIndex(Node<T> head, int length, int kth)
+    private Node<T> FindByIndex(int length, int kth)
     {
         // We can also use LinkedList.List.Select((value, index) => (value, index)).Single(x => x.index == searchingIndex);
 
-        Node<T> current = head;
+        Node<T> current = Head;
         int searchingIndex = length - kth;
         for (int index = 0; index < length; index++)
         {
@@ -53,10 +68,10 @@ public class LinkedList<T> : ILinkedList<T>
             current = current.Next;
         }
 
-        throw new Exception($"Not found an item: {nameof(head)} by index: {searchingIndex}");
+        throw new Exception($"Not found an item: {nameof(Head)} by index: {searchingIndex}");
     }
 
-    private int GetLength(Node<T> head)
+    private int GetLinkedListLength(Node<T> head)
     {
         // We can also use LinkedList.List.Count();
 
