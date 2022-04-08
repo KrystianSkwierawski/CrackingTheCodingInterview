@@ -7,6 +7,6 @@ public interface ILinkedList<T>
     public Node<T> Head { get; set; }
     public IList<Node<T>> List { get; }    
     public Node<T> AddLast(T value);
-    public LinkedList<int> DoPartition(int x);
+    public ILinkedList<int> DoPartition(int x);
 }
 

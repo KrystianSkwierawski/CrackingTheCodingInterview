@@ -61,7 +61,7 @@ public class LinkedList<T> : ILinkedList<T>
         return end;
     }
 
-    public LinkedList<int> DoPartition(int x)
+    public ILinkedList<int> DoPartition(int x)
     {
         if (Head is null)
             throw new ArgumentNullException();
