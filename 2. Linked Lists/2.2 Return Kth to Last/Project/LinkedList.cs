@@ -48,7 +48,7 @@ public class LinkedList<T> : ILinkedList<T>
         int length = GetLinkedListLength(Head);
 
         if (kth == 0)
-            kth = length;
+            kth++;
 
         Node<T> node = FindByIndex(length, kth);
 
@@ -82,18 +82,19 @@ public class LinkedList<T> : ILinkedList<T>
 
         int o_length = 0;
 
-        Node<T> fast = head;
-        Node<T> slow = head;
+        Node<T> current = head;
 
-        while (fast != null && fast.Next != null)
+        while (current?.Next is not null)
         {
             o_length += 2;
 
-            fast = fast.Next.Next;
-            slow = slow.Next;
+            current = current?.Next?.Next;
         }
 
-        return (slow is not null) ? ++o_length : o_length;
+        if (current is not null)
+            o_length++;
+
+        return o_length;
     }
 }
 
