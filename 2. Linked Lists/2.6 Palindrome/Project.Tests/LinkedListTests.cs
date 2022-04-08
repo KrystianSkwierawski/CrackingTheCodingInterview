@@ -12,17 +12,12 @@ namespace Project.Tests
         [TestCase("01210", true)]
         [TestCase("Racecar", false)]
         [TestCase("cat", false)]
-        public void ShouldCheckIfIsPalidrome(string list, bool expectedResult)
+        public void ShouldCheckIfIsPalidrome(string text, bool expectedResult)
         {
-            //Arrange
-            ILinkedList<char> linkedList = new LinkedList<char>(list.ToList());
+            ILinkedList<char> linkedList = new LinkedList<char>(text.ToList());
 
-
-            //Act
             var result = linkedList.IsPalidrome();
 
-
-            //Assert
             result.Should().Be(expectedResult);
         }
 
