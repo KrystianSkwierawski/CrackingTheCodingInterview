@@ -10,4 +10,4 @@ Output: C
 
 ## My Solution
 Time complexity: O(n). <br>
-Space complexity: O(n)
+Space complexity: O(n).
