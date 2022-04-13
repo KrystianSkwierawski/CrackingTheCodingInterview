@@ -79,7 +79,7 @@ public class LinkedList<T> : ILinkedList<T>
              .Select(y => y.Key).ToList();
 
             if (duplicates.Count() > 0)
-                return duplicates.FirstOrDefault();
+                return duplicates.First();
 
             node = node.Next;
         }
