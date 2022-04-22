@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace Project;
 
-public class MyStack<T>
+public class MyStack
 {
     public class StackNode<T>
     {
@@ -17,47 +17,63 @@ public class MyStack<T>
         }
     }
 
-    public IList<T> List { get; private set; } = new List<T>();
 
-    private StackNode<T> _top;
+    Stack<int> _minValues = new();
 
-    public T Pop()
+    private StackNode<int> _top;
+
+    public MyStack(IEnumerable<int> list)
+    {
+        foreach (var item in list)
+        {
+            Push(item);
+        }
+    }
+
+    public MyStack()
+    {
+
+    }
+
+    public int Pop()
     {
         if (_top is null)
             throw new Exception();
 
-        T item = _top.Value;
+        int item = _top.Value;
 
         _top = _top.Next;
 
-        List.Remove(item);
+        if (item == _minValues.Peek())
+            _minValues.Pop();
 
         return item;
     }
 
-    public void Push(T item)
+    public void Push(int item)
     {
-        StackNode<T> t = new(item);
+        StackNode<int> t = new(item);
         t.Next = _top;
         _top = t;
 
-        List.Add(item);
+        if (_minValues.Count == 0 || item < _minValues.Peek())
+            _minValues.Push(item);
     }
 
-    public T Peek()
+    public int Peek()
     {
         if (_top is null)
             throw new Exception();
-        
+
         return _top.Value;
     }
 
-    public T Min()
+    public int Min()
     {
-        if (List is null)
+        if (_top is null)
             throw new Exception();
 
-        return List.Min();
+        return _minValues.Peek();
     }
 
     public bool IsEmpty()
