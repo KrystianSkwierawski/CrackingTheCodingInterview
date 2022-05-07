@@ -1,1 +1,1 @@
-The hardest question for me in this chapter was the <a href="https://github.com/KrystianSkwierawski/CrackingTheCodingInterview/tree/main/1.%20Arrays%20and%20Strings/1.7%20Rotate%20Matrix">1.7 Rotate Matrix.</a>
+In this chapter, the most challenging question for me was the <a href="https://github.com/KrystianSkwierawski/CrackingTheCodingInterview/tree/main/1.%20Arrays%20and%20Strings/1.7%20Rotate%20Matrix">1.7 Rotate Matrix.</a>
