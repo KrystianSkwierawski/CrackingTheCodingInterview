@@ -19,6 +19,8 @@ namespace Project.Tests
 
             stack.Sort();
 
+            stack.Peek().Should().Be(expectedList[0]);
+
             stack.List.Should().BeEquivalentTo(
                     expectedList
                 );
