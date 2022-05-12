@@ -17,7 +17,9 @@ namespace Project.Tests
         {
             MyStack stack = new MyStack(list);
 
+
             stack.Sort();
+
 
             stack.Peek().Should().Be(expectedList[0]);
 
