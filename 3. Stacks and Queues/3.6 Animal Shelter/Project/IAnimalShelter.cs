@@ -10,6 +10,5 @@ public interface IAnimalShelter
     public Animal DequeueCat();
     public IList<Animal> CatsList { get; }
     public IList<Animal> DogsList { get; }
-
 }
 

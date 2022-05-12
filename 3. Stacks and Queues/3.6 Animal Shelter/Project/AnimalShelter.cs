@@ -17,10 +17,10 @@ public class AnimalShelter : IAnimalShelter
         Animal oldestCat = _catsLinkedList.First();
         Animal oldestDog = _dogsLinkedList.First();
 
-        if (oldestCat?.JoinDate > oldestDog?.JoinDate)
+        if (oldestCat?.JoinDate >= oldestDog?.JoinDate)
             return oldestDog;
 
-        if (oldestCat?.JoinDate < oldestDog?.JoinDate)
+        if (oldestCat?.JoinDate <= oldestDog?.JoinDate)
             return oldestCat;
 
         // not found any animall
