@@ -14,8 +14,8 @@ public class AnimalShelter : IAnimalShelter
 
     public Animal DequeueAny()
     {
-        Animal oldestCat = _catsLinkedList.First();
-        Animal oldestDog = _dogsLinkedList.First();
+        Animal oldestCat = _catsLinkedList.FirstOrDefault();
+        Animal oldestDog = _dogsLinkedList.FirstOrDefault();
 
         if (oldestCat?.JoinDate >= oldestDog?.JoinDate)
             return oldestDog;
@@ -29,14 +29,14 @@ public class AnimalShelter : IAnimalShelter
 
     public Animal DequeueCat()
     {
-        Animal cat = _catsLinkedList.First();
+        Animal cat = _catsLinkedList.FirstOrDefault();
         _catsLinkedList.RemoveFirst();
         return cat;
     }
 
     public Animal DequeueDog()
     {
-        Animal dog = _dogsLinkedList.First();
+        Animal dog = _dogsLinkedList.FirstOrDefault();
         _dogsLinkedList.RemoveFirst();
         return dog;
     }

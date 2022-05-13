@@ -60,6 +60,19 @@ namespace Project.Tests
         }
 
         [Test]
+        public void DequeueAny_ShouldReturnNullIfNoneAnimals()
+        {
+            //Arrange
+            IAnimalShelter animalShelter = new AnimalShelter();
+
+            //Act
+            var result = animalShelter.DequeueAny();
+
+            //Assert
+            result.Should().BeNull();
+        }
+
+        [Test]
         public void ShouldDequeueCat()
         {
             //Arrange
