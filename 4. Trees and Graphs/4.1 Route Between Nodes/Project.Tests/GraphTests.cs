@@ -35,6 +35,25 @@ namespace Project.Tests
 
             //Assert
             result.Should().BeFalse();
+
+        }
+
+        [Test]
+        public void ShouldInitializeTestData()
+        {
+            //Arrange
+            Graph graph = new Graph();
+
+
+            //Act
+            var (root, end) = graph.InitializeTestData();
+
+
+            //Assert
+            root.Should().NotBeNull();
+            end.Should().NotBeNull();
+            root.Value.Should().Be(0);
+            end.Value.Should().Be(3);
         }
     }
 }
