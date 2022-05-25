@@ -3,6 +3,6 @@ Sort Stack: Write a program to sort a stack such that the smallest items are on 
 an additional temporary stack, but you may not copy the elements into any other data structure
 (such as an array). The stack supports the following operations: push, pop, peek, and is Empty. 
 
-## Solution
+## My Solution
 Time complexity: O(n²). <br>
 Space complexity: O(1).
