@@ -20,7 +20,7 @@ public class Graph
 
     public bool DFSSearch(Node root, Node end)
     {
-        if (root is null)
+        if (root is null || end is null)
             return false;
 
         if (root == end)
