@@ -3,6 +3,4 @@ Minimal Tree: Given a sorted (increasing order) array with unique integer elemen
 
 ## My Solution
 Time complexity: O(log n). <br>
-Space complexity: O(log n). <br>
-
-Refactor is required :)
+Space complexity: O(log n). 
