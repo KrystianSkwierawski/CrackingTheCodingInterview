@@ -36,5 +36,7 @@ namespace Project.Tests
             FluentActions.Invoking(() => minimalTree.GetNodes(null))
                 .Should().Throw<ArgumentNullException>();
         }
+
+        //TODO: add get nodes tests some tests
     }
 }

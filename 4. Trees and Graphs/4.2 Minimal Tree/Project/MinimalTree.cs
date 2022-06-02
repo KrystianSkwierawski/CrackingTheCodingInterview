@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Project;
 
@@ -8,7 +9,6 @@ public class MinimalTree
     public Node Root { get; private set; }
 
     private IList<Node> _nodesInOrderTraversal;
-
 
     public MinimalTree(int[] array)
     {
@@ -45,15 +45,11 @@ public class MinimalTree
         if (typeOfTraversal is TypeOfTraversals.InOrderTraversal)
             GetNodesInOrderTraversal(root);
 
+        if (typeOfTraversal is TypeOfTraversals.PreOrderTraversal)
+            GetNodesInPreOrderTraversal(root);
 
-        // You can add different types of traversal.
-
-        //if (typeOfTraversal is TypeOfTraversals.PreOrderTraversal)
-        //    GetNodesInPreTraversal(root);
-
-        //if (typeOfTraversal is TypeOfTraversals.PostOrderTraversal)
-        //    GetNodesInPostOrderTraversal(root);
-
+        if (typeOfTraversal is TypeOfTraversals.PostOrderTraversal)
+            GetNodesInPostOrderTraversal(root);
 
         if (typeOfTraversal is TypeOfTraversals.Node)
             throw new ArgumentException();
@@ -69,6 +65,26 @@ public class MinimalTree
         GetNodesInOrderTraversal(root.Left);
         _nodesInOrderTraversal.Add(root);
         GetNodesInOrderTraversal(root.Right);
+    }
+
+    private void GetNodesInPreOrderTraversal(Node root)
+    {
+        if (root is null)
+            return;
+
+        _nodesInOrderTraversal.Add(root);
+        GetNodesInOrderTraversal(root.Left);
+        GetNodesInOrderTraversal(root.Right);
+    }
+
+    private void GetNodesInPostOrderTraversal(Node root)
+    {
+        if (root is null)
+            return;
+
+        GetNodesInOrderTraversal(root.Left);
+        GetNodesInOrderTraversal(root.Right);
+        _nodesInOrderTraversal.Add(root);
     }
 }
 
