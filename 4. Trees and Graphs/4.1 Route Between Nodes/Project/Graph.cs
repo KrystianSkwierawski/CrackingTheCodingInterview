@@ -40,7 +40,32 @@ public class Graph
 
     public bool BFSSearch(Node root, Node end)
     {
-      
+        if (root is null || end is null)
+            return false;
+
+        if (root == end)
+            return true;
+
+        Queue<Node> queue = new Queue<Node>();
+        root.Visited = true;
+        queue.Enqueue(root);
+
+        while(queue.Count > 0)
+        {
+            Node r = queue.Dequeue();
+
+            if (r == end)
+                return true;
+
+            foreach (var children in r.Childrens)
+            {
+                if(children.Visited == false)
+                {
+                    children.Visited = true;
+                    queue.Enqueue(children);
+                }
+            }
+        }
 
         return false;
     }

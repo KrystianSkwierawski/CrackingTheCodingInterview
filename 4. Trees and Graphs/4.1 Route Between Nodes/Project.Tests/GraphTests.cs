@@ -6,7 +6,9 @@ namespace Project.Tests
     public class GraphTests
     {
         [Test]
-        public void DFSSearch_ShouldReturnTrueWhenCorrectPath()
+        [TestCase(TypeOfSearch.DFS)]
+        [TestCase(TypeOfSearch.BFS)]
+        public void ShouldReturnTrueWhenCorrectPath(TypeOfSearch typeOfSearch)
         {
             //Arrange
             Graph graph = new Graph();
@@ -14,7 +16,7 @@ namespace Project.Tests
 
 
             //Act
-            bool result = graph.IsRouteBetweenTwoRoutes(root, end, TypeOfSearch.DFS);
+            bool result = graph.IsRouteBetweenTwoRoutes(root, end, typeOfSearch);
 
 
             //Assert
@@ -22,7 +24,9 @@ namespace Project.Tests
         }
 
         [Test]
-        public void DFSSearch_ShouldReturnFalseWhenIncorrectPath()
+        [TestCase(TypeOfSearch.DFS)]
+        [TestCase(TypeOfSearch.BFS)]
+        public void ShouldReturnFalseWhenIncorrectPath(TypeOfSearch typeOfSearch)
         {
             //Arrange
             Graph graph = new Graph();
@@ -30,7 +34,7 @@ namespace Project.Tests
 
 
             //Act
-            bool result = graph.IsRouteBetweenTwoRoutes(end, root, TypeOfSearch.DFS);
+            bool result = graph.IsRouteBetweenTwoRoutes(end, root, typeOfSearch);
 
 
             //Assert

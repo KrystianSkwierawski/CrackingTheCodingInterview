@@ -7,7 +7,7 @@ namespace Project
         static void Main(string[] args)
         {
             Graph graph = new Graph();
-            graph.InitializeTestData();
+            var (start, end) = graph.InitializeTestData();
 
             graph.Print();
 
