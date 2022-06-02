@@ -11,7 +11,7 @@ My solutions to <a href="https://www.amazon.pl/Cracking-Coding-Interview-Program
 - [x] <a href="https://github.com/KrystianSkwierawski/CrackingTheCodingInterview/tree/main/1.%20Arrays%20and%20Strings">Chapter 1 - Array and Strings</a>
 - [x] <a href="https://github.com/KrystianSkwierawski/CrackingTheCodingInterview/tree/main/2.%20Linked%20Lists">Chapter 2 - Linked Lists</a>
 - [x] <a href="https://github.com/KrystianSkwierawski/CrackingTheCodingInterview/tree/main/3.%20Stacks%20and%20Queues">Chapter 3 - Stack and Queues</a>
-- [ ] Chapter 4 - Trees and Graphs
+- [ ] <a href="https://github.com/KrystianSkwierawski/CrackingTheCodingInterview/tree/main/4.%20Trees%20and%20Graphs/">Chapter 4 - Trees and Graphs (Inprogress)</a>
 - [ ] Chapter 5 - Bit Manipulation
 - [ ] Chapter 6 - Math and Logic Puzzles
 - [ ] Chapter 7 - Object-Oriented Design
