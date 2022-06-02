@@ -47,7 +47,6 @@ public class Graph
             return true;
 
         Queue<Node> queue = new Queue<Node>();
-        root.Visited = true;
         queue.Enqueue(root);
 
         while(queue.Count > 0)
@@ -65,6 +64,8 @@ public class Graph
                     queue.Enqueue(children);
                 }
             }
+
+            r.Visited = true;
         }
 
         return false;
