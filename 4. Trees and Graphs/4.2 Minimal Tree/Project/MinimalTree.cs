@@ -35,26 +35,40 @@ public class MinimalTree
         return mid;
     }
 
-    public IList<Node> GetNodesInOrderTraversal(Node root)
+    public IList<Node> GetNodes(Node root, TypeOfTraversals typeOfTraversal = TypeOfTraversals.InOrderTraversal)
     {
         if (root is null)
             throw new ArgumentNullException();
 
         _nodesInOrderTraversal = new List<Node>();
 
-        GetNodesInOrderTraversalHelper(root);
+        if (typeOfTraversal is TypeOfTraversals.InOrderTraversal)
+            GetNodesInOrderTraversal(root);
+
+
+        // You can add different types of traversal.
+
+        //if (typeOfTraversal is TypeOfTraversals.PreOrderTraversal)
+        //    GetNodesInPreTraversal(root);
+
+        //if (typeOfTraversal is TypeOfTraversals.PostOrderTraversal)
+        //    GetNodesInPostOrderTraversal(root);
+
+
+        if (typeOfTraversal is TypeOfTraversals.Node)
+            throw new ArgumentException();
 
         return _nodesInOrderTraversal;
     }
 
-    private void GetNodesInOrderTraversalHelper(Node root)
+    private void GetNodesInOrderTraversal(Node root)
     {
         if (root is null)
             return;
 
-        GetNodesInOrderTraversalHelper(root.Left);
+        GetNodesInOrderTraversal(root.Left);
         _nodesInOrderTraversal.Add(root);
-        GetNodesInOrderTraversalHelper(root.Right);
+        GetNodesInOrderTraversal(root.Right);
     }
 }
 

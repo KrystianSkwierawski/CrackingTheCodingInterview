@@ -16,7 +16,7 @@ namespace Project.Tests
             MinimalTree minimalTree = new MinimalTree(sortedArray);
 
 
-            var nodes = minimalTree.GetNodesInOrderTraversal(minimalTree.Root);
+            var nodes = minimalTree.GetNodes(minimalTree.Root);
             nodes.Select(Node => Node.Value).Should().BeEquivalentTo(sortedArray);
             nodes.Count().Should().Be(sortedArray.Length);
         }
@@ -33,7 +33,7 @@ namespace Project.Tests
         {
             MinimalTree minimalTree = new MinimalTree(new int[] { 1 });
 
-            FluentActions.Invoking(() => minimalTree.GetNodesInOrderTraversal(null))
+            FluentActions.Invoking(() => minimalTree.GetNodes(null))
                 .Should().Throw<ArgumentNullException>();
         }
     }
