@@ -2,7 +2,7 @@
 
 namespace Project;
 
-public class Graph
+public class Graph : IGraph
 {
     private LinkedList<Node> _nodes { get; set; } = new LinkedList<Node>();
 
@@ -17,7 +17,7 @@ public class Graph
         return false;
     }
 
-    public bool DFSSearch(Node root, Node end)
+    private bool DFSSearch(Node root, Node end)
     {
         if (root is null || end is null)
             return false;
@@ -38,7 +38,7 @@ public class Graph
         return false;
     }
 
-    public bool BFSSearch(Node root, Node end)
+    private bool BFSSearch(Node root, Node end)
     {
         if (root is null || end is null)
             return false;

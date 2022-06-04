@@ -11,7 +11,7 @@ namespace Project.Tests
         public void ShouldReturnTrueWhenCorrectPath(TypeOfSearch typeOfSearch)
         {
             //Arrange
-            Graph graph = new Graph();
+            IGraph graph = new Graph();
             var (root, end) = graph.InitializeTestData();
 
 
@@ -29,7 +29,7 @@ namespace Project.Tests
         public void ShouldReturnFalseWhenIncorrectPath(TypeOfSearch typeOfSearch)
         {
             //Arrange
-            Graph graph = new Graph();
+            IGraph graph = new Graph();
             var (root, end) = graph.InitializeTestData();
 
 
@@ -46,7 +46,7 @@ namespace Project.Tests
         public void ShouldInitializeTestData()
         {
             //Arrange
-            Graph graph = new Graph();
+            IGraph graph = new Graph();
 
 
             //Act
