@@ -4,9 +4,9 @@ using System.Linq;
 
 namespace Project;
 
-public class MinimalTree
+public class MinimalTree : IMinimalTree
 {
-    public Node Root { get; private set; }
+    public Node Root { get; set; }
 
     private IList<Node> _nodesInOrderTraversal;
 

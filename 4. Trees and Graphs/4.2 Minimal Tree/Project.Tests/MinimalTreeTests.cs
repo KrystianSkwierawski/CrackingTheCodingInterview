@@ -13,7 +13,7 @@ namespace Project.Tests
         [TestCase(new int[] { 1 })]
         public void ShouldCreateMinimalTree(int[] sortedArray)
         {
-            MinimalTree minimalTree = new MinimalTree(sortedArray);
+            IMinimalTree minimalTree = new MinimalTree(sortedArray);
 
 
             var nodes = minimalTree.GetNodes(minimalTree.Root);
@@ -31,7 +31,7 @@ namespace Project.Tests
         [Test]
         public void GetNodesInOrderTraversal_ShouldThrowExceptionIfRootIsNull()
         {
-            MinimalTree minimalTree = new MinimalTree(new int[] { 1 });
+            IMinimalTree minimalTree = new MinimalTree(new int[] { 1 });
 
             FluentActions.Invoking(() => minimalTree.GetNodes(null))
                 .Should().Throw<ArgumentNullException>();
